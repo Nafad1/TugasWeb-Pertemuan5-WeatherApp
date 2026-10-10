@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - Tugas Rutin 5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="weather-app">
+    <h1>🌤️ Weather App</h1>
+
+    <form id="searchForm">
+      <input type="text" id="cityInput" placeholder="Masukkan nama kota..." autocomplete="off">
+      <button type="submit">Cari</button>
+    </form>
+
+    <div class="unit-toggle">
+      <button type="button" id="unitToggle" class="unit-btn">Tampilkan °F</button>
+    </div>
+
+    <div id="loading" class="hidden">Memuat data...</div>
+    <div id="error" class="hidden"></div>
+
+    <div id="weatherResult" class="hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" alt="weather icon">
+      <p id="temperature" class="temp"></p>
+      <p id="description"></p>
+      <p id="humidity"></p>
+    </div>
+
+    <div id="historyContainer" class="hidden">
+      <h3>Riwayat Pencarian</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

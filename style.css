@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.weather-app {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+.unit-toggle {
+  margin-bottom: 1rem;
+}
+
+.unit-btn {
+  background: #edf2f7;
+  color: #4a5568;
+  font-size: 0.875rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+
+.unit-btn:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  color: #667eea;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+#error {
+  color: #e53e3e;
+  background: #fff5f5;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+#weatherResult {
+  margin-top: 1.5rem;
+}
+
+#cityName {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+}
+
+#description, #humidity {
+  color: #666;
+  margin: 0.25rem 0;
+  text-transform: capitalize;
+}
+
+#historyContainer {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+#historyContainer h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+#historyList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#historyList li {
+  background: #edf2f7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#historyList li:hover {
+  background: #e2e8f0;
+}
+
+@media (max-width: 600px) {
+  .weather-app {
+    padding: 1.5rem;
+  }
+  form {
+    flex-direction: column;
+  }
+  form button {
+    width: 100%;
+  }
+  .temp {
+    font-size: 2.5rem;
+  }
+}
